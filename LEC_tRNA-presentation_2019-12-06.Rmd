@@ -32,6 +32,7 @@ suppressPackageStartupMessages({
 	library(readr)
 	library(plotly)
 	library(kableExtra)
+	library(emo)
 })
 ```
 
@@ -175,6 +176,14 @@ tRNAs %>%
 	)
 ```
 
+<section data-notes="
+	- 23 nuclear encoded mitochondrial tRNAs
+	- 116 potential pseudogenes
+	- 107 are in blacklisted regions
+	- 7 of the 61 non-STOP codons are missing - wobble pairing
+		- (*e.g.* GCG Arg, ACC Gly)
+"></section>
+
 ## tRNA expression
 
 - RNA polymerase III [@Schramm2002]
@@ -201,11 +210,11 @@ knitr::include_graphics("./graphics/tRNA-PollIII.png")
 
 ## Age-related DNA hypermethyation
 
-- tRNAome-wide significant $8.36\times10^{-5}$
+- tRNAome-wide significant (p < $8.36\times10^{-5}$)
 	- Batch corrected __44__ $\uparrow$, $\downarrow$ 0
 	- Batch and Blood Cell-type corrected __16__ $\uparrow$, $\downarrow$ 0
-		
-- 21 genome-wide significant and 44 study-wide significant 
+- Genome-wide significant (p < $4.34\times10^{-9}$)
+	- 3 Batch and Blood Cell-type corrected
 
 ```{r, out.width='60%', echo=FALSE,}
 bb6tRNASummaryTab <- read_tsv(
@@ -242,18 +251,143 @@ bb6tRNASummaryTabKable
 knitr::include_graphics("./graphics/nSigWinProps_WGfishers_BB_sws_hyper_2_BL_noPolyBivExcl_BarTxtast_sr.png")
 ```
 
-## ... Comparable CpG Density
+## CpG Density Permutation
 
 ```{r out.width='75%', fig.show='hold', fig.align = 'center', echo=FALSE}
 knitr::include_graphics("./graphics/tRNA-poly-bivP_n1000_combined_perm_hist.png")
 ```
 
+## MeDIP-seq
+
+- Regional
+	- Good Coverage but limited positional resolution
+- Imperfect methylation Quantitation (especially at low DNAm)
+- large N in our data (3001)
+
+```{r out.width='25%', fig.show='hold', fig.align = 'center', echo=FALSE}
+knitr::include_graphics("./graphics/chip-seq.jpeg")
+```
+
+## 450k Array
+
+...expand?
+
+- Good Methylation Quantitation
+- CpG specific
+- Limited Coverage of tRNAome
+- N = 587
+
+```{r out.width='25%', fig.show='hold', fig.align = 'center', echo=FALSE}
+knitr::include_graphics("./graphics/infinium_methylation_snapshot.png")
+```
+
+## Validation in 450k array
+
+- Covers 103 tRNAs, 7 of the 16 tRNAome significant
+- 5 of these show an increase ($4.39\times10^{-4}$)
+- Cell-type corrected
+
+```{r out.width='55%', fig.show='hold', fig.align = 'center', echo=FALSE}
+knitr::include_graphics("./graphics/blood_epitwins450k_Counts_sws_bl.png")
+```
+
+## Targeted Bisulfite Sequencing
+
+Pooled Samples approach
+
+```{r poolAges, out.width='60%', echo=FALSE,}
+poolColours <-c(
+	"Pool 1"="#ffffcc","Pool 2"="#CCCC56",
+	"Pool 3"="#a1dab4","Pool 4"="#3CA661",
+	
+	"Pool 5"="#41b6c4","Pool 6"="#2899A8",
+	"Pool 7"="#225ea8","Pool 8"="#14488C"#,
+	#"DNAm Age" = "red"
+)
+
+read_tsv("./data/poolSummaries.tsv", col_types = "cdcddd") %>%
+	mutate(
+		Pool = cell_spec(
+			Pool, "html",#"latex",
+			# color = "#000000",
+			align = "c"#,# angle = 45,
+			# background = poolColours[Pool]
+		)
+	) %>%
+	kable(
+		digits = 2,
+		format = "html",#"latex",
+		escape = FALSE,
+		booktabs = TRUE,
+		#caption = "(ref:poolAgesCap)",
+		linesep = ""
+	) %>%
+	kable_styling(
+		bootstrap_options = "striped", full_width = FALSE,
+		latex_options = "striped"
+	) %>%#, fixed_thead = TRUE
+	#row_spec(0, background = "#b8b8b8") %>%
+	column_spec(1, bold = TRUE, border_right = TRUE)
+
+#poolSummaryTable
+```
+
+## Targeted Bisulfite Sequencing
+
+- 79 tRNA loci
+- Differences between Duplicates / Isodecoders
+
+```{r out.width='75%', fig.show='hold', fig.align = 'center', echo=FALSE}
+knitr::include_graphics("./graphics/combinedKaryoplots_sig_bl_1.png")
+```
+
+## tRNA gene methylation by Cell-type 
+
+- Sorted blood cell populations, 450k array [@Reinius2012]
+- 8 study-wide significant tRNAs covered are collectively significantly more methylated in the lymphoid than the myeloid lineage (1.1% difference, Wilcoxon rank sum test p = $1.50\times10^{-6}$)
+- $\therefore$ Age-related $\uparrow$ myeloid cell proportion $\rightarrow$  age-related hypermethylation $\downarrow$
+
+```{r out.width='55%', fig.show='hold', fig.align = 'center', echo=FALSE}
+knitr::include_graphics("./graphics/meanMethbytRNAMatLowBB6_bl.png")
+```
+
+## Mouse `r ji("mouse2")`
+
+- Reduce Representation Bisulfite Sequencing (RRBS) covering 51 tRNAs (~11% of total) 
+- N = 152, Aged 0.67-35 months
+
+```{r out.width='65%', fig.show='hold', fig.align = 'center', echo=FALSE}
+knitr::include_graphics("./graphics/CpGPlotComb.png")
+```
+
+# Functional Consequences
+
+# Chromatin State
+
+```{r out.width='65%', fig.show='hold', fig.align = 'center', echo=FALSE}
+knitr::include_graphics("./graphics/CpGPlotComb.png")
+```
+
+Epilogos [@Meuleman2019] 'Blood & T-cell' 15 State model (tRNA genes +/- 200bp)
+
+# Expression
+
+```{r out.width='65%', fig.show='hold', fig.align = 'center', echo=FALSE}
+knitr::include_graphics("./graphics/nonSigIsoMapbbswsPlotsGln-CTG.png")
+```
+
+# Future Work - Alu Clock
+
+- Constructing a DNAm clock using Alu elements
+- GWAS for Alu Age acceleration
+
 # References
 
 ---
-<small>
+
+<small><small>
 <div id="refs"></div>
-</small>
+</small></small>
 
 ---
 

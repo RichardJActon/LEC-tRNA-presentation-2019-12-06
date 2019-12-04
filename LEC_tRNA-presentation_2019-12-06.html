@@ -567,8 +567,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li>&lt;46kb, 0.002% of the Genome</li>
 <li>2nd most abundant RNA species, ~60 million/cell</li>
 </ul>
-<div id="htmlwidget-df35f2f107abdcc214ab" style="width:800px;height:400px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-df35f2f107abdcc214ab">{"x":{"visdat":{"afa8d753e3":["function () ","plotlyVisDat"]},"cur_data":"afa8d753e3","attrs":{"afa8d753e3":{"labels":{},"values":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"pie","hole":0.6,"inherit":true}},"layout":{"width":800,"height":400,"margin":{"b":40,"l":60,"t":50,"r":10},"title":"Proportion of tRNAs By Chromosome","showlegend":true,"xaxis":{"showgrid":false,"zeroline":false,"showticklabels":false},"yaxis":{"showgrid":false,"zeroline":false,"showticklabels":false},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"labels":["chr1","chr1_gl000192_random","chr10","chr11","chr12","chr13","chr14","chr15","chr16","chr17","chr18","chr19","chr2","chr20","chr21","chr22","chr3","chr4","chr5","chr6","chr7","chr8","chr9","chrX"],"values":[127,2,7,21,15,5,24,12,32,42,1,14,26,1,2,1,9,5,25,176,32,11,10,10],"type":"pie","hole":0.6,"marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(255,255,255,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-b42a8446f9f12b8dadcc" style="width:800px;height:400px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b42a8446f9f12b8dadcc">{"x":{"visdat":{"2e3c300a787e":["function () ","plotlyVisDat"]},"cur_data":"2e3c300a787e","attrs":{"2e3c300a787e":{"labels":{},"values":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"pie","hole":0.6,"inherit":true}},"layout":{"width":800,"height":400,"margin":{"b":40,"l":60,"t":50,"r":10},"title":"Proportion of tRNAs By Chromosome","showlegend":true,"xaxis":{"showgrid":false,"zeroline":false,"showticklabels":false},"yaxis":{"showgrid":false,"zeroline":false,"showticklabels":false},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"labels":["chr1","chr1_gl000192_random","chr10","chr11","chr12","chr13","chr14","chr15","chr16","chr17","chr18","chr19","chr2","chr20","chr21","chr22","chr3","chr4","chr5","chr6","chr7","chr8","chr9","chrX"],"values":[127,2,7,21,15,5,24,12,32,42,1,14,26,1,2,1,9,5,25,176,32,11,10,10],"type":"pie","hole":0.6,"marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(255,255,255,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </section><section id="trna-expression" class="slide level2">
 <h2>tRNA expression</h2>
 <ul>
@@ -592,12 +592,15 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <section><section id="results" class="title-slide slide level1"><h1>Results</h1></section><section id="age-related-dna-hypermethyation" class="slide level2">
 <h2>Age-related DNA hypermethyation</h2>
 <ul>
-<li>tRNAome-wide significant <span class="math inline">\(8.36\times10^{-5}\)</span>
+<li>tRNAome-wide significant (p &lt; <span class="math inline">\(8.36\times10^{-5}\)</span>)
 <ul>
 <li>Batch corrected <strong>44</strong> <span class="math inline">\(\uparrow\)</span>, <span class="math inline">\(\downarrow\)</span> 0</li>
 <li>Batch and Blood Cell-type corrected <strong>16</strong> <span class="math inline">\(\uparrow\)</span>, <span class="math inline">\(\downarrow\)</span> 0</li>
 </ul></li>
-<li>21 genome-wide significant and 44 study-wide significant</li>
+<li>Genome-wide significant (p &lt; <span class="math inline">\(4.34\times10^{-9}\)</span>)
+<ul>
+<li>3 Batch and Blood Cell-type corrected</li>
+</ul></li>
 </ul>
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
@@ -676,15 +679,260 @@ chr17
 </section><section id="enrichment-for-dna-hypermethylation" class="slide level2">
 <h2>Enrichment for DNA hypermethylation</h2>
 <p><img src="graphics/nSigWinProps_WGfishers_BB_sws_hyper_2_BL_noPolyBivExcl_BarTxtast_sr.png" width="50%" style="display: block; margin: auto;" /></p>
-</section><section id="comparable-cpg-density" class="slide level2">
-<h2>… Comparable CpG Density</h2>
-<p><img src="graphics/tRNA-poly-bivP_n1000_combined_perm_hist.png" width="50%" style="display: block; margin: auto;" /></p>
+</section><section id="cpg-density-permutation" class="slide level2">
+<h2>CpG Density Permutation</h2>
+<p><img src="graphics/tRNA-poly-bivP_n1000_combined_perm_hist.png" width="75%" style="display: block; margin: auto;" /></p>
+</section><section id="medip-seq" class="slide level2">
+<h2>MeDIP-seq</h2>
+<ul>
+<li>Regional
+<ul>
+<li>Good Coverage but limited positional resolution</li>
+</ul></li>
+<li>Imperfect methylation Quantitation (especially at low DNAm)</li>
+<li>large N in our data (3001)</li>
+</ul>
+<p><img src="graphics/chip-seq.jpeg" width="25%" style="display: block; margin: auto;" /></p>
+</section><section id="k-array" class="slide level2">
+<h2>450k Array</h2>
+<ul>
+<li>Good Methylation Quantitation</li>
+<li>CpG specific</li>
+<li>Limited Coverage of tRNAome</li>
+<li>N = 587</li>
+</ul>
+<p><img src="graphics/infinium_methylation_snapshot.png" width="25%" style="display: block; margin: auto;" /></p>
+</section><section id="validation-in-450k-array" class="slide level2">
+<h2>Validation in 450k array</h2>
+<ul>
+<li>Covers 103 tRNAs, 7 of the 16 tRNAome significant</li>
+<li>5 of these show an increase (<span class="math inline">\(4.39\times10^{-4}\)</span>)</li>
+<li>Cell-type corrected</li>
+</ul>
+<p><img src="graphics/blood_epitwins450k_Counts_sws_bl.png" width="55%" style="display: block; margin: auto;" /></p>
+</section><section id="targeted-bisulfite-sequencing" class="slide level2">
+<h2>Targeted Bisulfite Sequencing</h2>
+<p>Pooled Samples approach</p>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Pool
+</th>
+<th style="text-align:right;">
+Mean Age
+</th>
+<th style="text-align:left;">
+Sex
+</th>
+<th style="text-align:right;">
+Min Age
+</th>
+<th style="text-align:right;">
+Max Age
+</th>
+<th style="text-align:right;">
+n
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<span style="     text-align: c;">Pool 1</span>
+</td>
+<td style="text-align:right;">
+4.07
+</td>
+<td style="text-align:left;">
+Male
+</td>
+<td style="text-align:right;">
+3.99
+</td>
+<td style="text-align:right;">
+4.38
+</td>
+<td style="text-align:right;">
+20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<span style="     text-align: c;">Pool 2</span>
+</td>
+<td style="text-align:right;">
+4.09
+</td>
+<td style="text-align:left;">
+Female
+</td>
+<td style="text-align:right;">
+3.99
+</td>
+<td style="text-align:right;">
+4.36
+</td>
+<td style="text-align:right;">
+20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<span style="     text-align: c;">Pool 3</span>
+</td>
+<td style="text-align:right;">
+28.07
+</td>
+<td style="text-align:left;">
+Female
+</td>
+<td style="text-align:right;">
+25.87
+</td>
+<td style="text-align:right;">
+29.80
+</td>
+<td style="text-align:right;">
+25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<span style="     text-align: c;">Pool 4</span>
+</td>
+<td style="text-align:right;">
+28.23
+</td>
+<td style="text-align:left;">
+Female
+</td>
+<td style="text-align:right;">
+26.05
+</td>
+<td style="text-align:right;">
+30.01
+</td>
+<td style="text-align:right;">
+25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<span style="     text-align: c;">Pool 5</span>
+</td>
+<td style="text-align:right;">
+63.40
+</td>
+<td style="text-align:left;">
+Female
+</td>
+<td style="text-align:right;">
+62.80
+</td>
+<td style="text-align:right;">
+63.80
+</td>
+<td style="text-align:right;">
+25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<span style="     text-align: c;">Pool 6</span>
+</td>
+<td style="text-align:right;">
+63.26
+</td>
+<td style="text-align:left;">
+Female
+</td>
+<td style="text-align:right;">
+62.70
+</td>
+<td style="text-align:right;">
+63.70
+</td>
+<td style="text-align:right;">
+25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<span style="     text-align: c;">Pool 7</span>
+</td>
+<td style="text-align:right;">
+77.96
+</td>
+<td style="text-align:left;">
+Female
+</td>
+<td style="text-align:right;">
+75.50
+</td>
+<td style="text-align:right;">
+80.50
+</td>
+<td style="text-align:right;">
+25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<span style="     text-align: c;">Pool 8</span>
+</td>
+<td style="text-align:right;">
+77.22
+</td>
+<td style="text-align:left;">
+Female
+</td>
+<td style="text-align:right;">
+74.40
+</td>
+<td style="text-align:right;">
+80.10
+</td>
+<td style="text-align:right;">
+25
+</td>
+</tr>
+</tbody>
+</table>
+</section><section id="targeted-bisulfite-sequencing-1" class="slide level2">
+<h2>Targeted Bisulfite Sequencing</h2>
+<ul>
+<li>Differences between Duplicates / Isodecoders</li>
+</ul>
+<p><img src="graphics/combinedKaryoplots_sig_bl_1.png" width="75%" style="display: block; margin: auto;" /></p>
+</section><section id="trna-gene-methylation-by-cell-type" class="slide level2">
+<h2>tRNA gene methylation by Cell-type</h2>
+<ul>
+<li>Sorted blood cell populations, 450k array <span class="citation" data-cites="Reinius2012">[<a href="#/ref-Reinius2012" role="doc-biblioref">10</a>]</span></li>
+<li>8 study-wide significant tRNAs covered are collectively significantly more methylated in the lymphoid than the myeloid lineage (1.1% difference, Wilcoxon rank sum test p = <span class="math inline">\(1.50\times10^{-6}\)</span>)</li>
+<li><span class="math inline">\(\therefore\)</span> Age-related <span class="math inline">\(\uparrow\)</span> myeloid cell proportion <span class="math inline">\(\rightarrow\)</span> age-related hypermethylation <span class="math inline">\(\downarrow\)</span></li>
+</ul>
+<p><img src="graphics/meanMethbytRNAMatLowBB6_bl.png" width="55%" style="display: block; margin: auto;" /></p>
+</section><section id="mouse" class="slide level2">
+<h2>Mouse 🐁</h2>
+<ul>
+<li>Reduce Representation Bisulfite Sequencing (RRBS) covering 51 tRNAs (~11% of total)</li>
+<li>N = 152, Aged 0.67-35 months</li>
+</ul>
+<p><img src="graphics/CpGPlotComb.png" width="65%" style="display: block; margin: auto;" /></p>
 </section></section>
-<section><section id="references" class="title-slide slide level1"><h1>References</h1></section><section id="human-trnaome-1" class="slide level2">
-<h2>Human tRNAome</h2>
-<p><img src="graphics/kutteresq_BLcount.png" width="85%" style="display: block; margin: auto;" /></p>
-<p>() = pseudo genes, [] = in blacklisted regions</p>
-<div id="refs" class="references" role="doc-bibliography">
+<section id="functional-consequences" class="title-slide slide level1"><h1>Functional Consequences</h1></section>
+<section id="chromatin-state" class="title-slide slide level1"><h1>Chromatin State</h1><p><img src="graphics/CpGPlotComb.png" width="65%" style="display: block; margin: auto;" /></p>
+<p>Epilogos <span class="citation" data-cites="Meuleman2019">[<a href="#/ref-Meuleman2019" role="doc-biblioref">11</a>]</span> ‘Blood &amp; T-cell’ 15 State model (tRNA genes +/- 200bp)</p></section>
+<section id="expression" class="title-slide slide level1"><h1>Expression</h1><p><img src="graphics/nonSigIsoMapbbswsPlotsGln-CTG.png" width="65%" style="display: block; margin: auto;" /></p></section>
+<section id="future-work---alu-clock" class="title-slide slide level1"><h1>Future Work - Alu Clock</h1><ul>
+<li>Constructing a DNAm clock using Alu elements</li>
+<li>GWAS for Alu Age acceleration</li>
+</ul></section>
+<section><section id="references" class="title-slide slide level1"><h1>References</h1></section><section class="slide level2">
+
+<small><small>
+<div id="refs" role="doc-bibliography">
 <div id="ref-Booth2016">
 <p>1. Booth LN, Brunet A: <strong>The Aging Epigenome</strong>. <em>Molecular Cell</em> 2016, <strong>62</strong>:728–744<a href="https://doi.org/10.1016/j.molcel.2016.05.013">10.1016/j.molcel.2016.05.013</a>Available: <a href="http://dx.doi.org/10.1016/j.molcel.2016.05.013">http://dx.doi.org/10.1016/j.molcel.2016.05.013</a>.</p>
 </div>
@@ -712,7 +960,18 @@ chr17
 <div id="ref-Dhahbi2013">
 <p>9. Dhahbi JM, Spindler SR, Atamna H, Yamakawa A, Boffelli D, Mote P, Martin DI: <strong>5’ tRNA halves are present as abundant complexes in serum, concentrated in blood cells, and modulated by aging and calorie restriction</strong>. <em>BMC Genomics</em> 2013, <strong>14</strong>:298<a href="https://doi.org/10.1186/1471-2164-14-298">10.1186/1471-2164-14-298</a>Available: <a href="http://www.ncbi.nlm.nih.gov/pubmed/23638709">http://www.ncbi.nlm.nih.gov/pubmed/23638709</a>.</p>
 </div>
+<div id="ref-Reinius2012">
+<p>10. Reinius LE, Acevedo N, Joerink M, Pershagen G, Dahlén S-E, Greco D, Söderhäll C, Scheynius A, Kere J: <strong>Differential DNA Methylation in Purified Human Blood Cells: Implications for Cell Lineage and Studies on Disease Susceptibility</strong>. <em>PLoS ONE</em> 2012, <strong>7</strong>:e41361<a href="https://doi.org/10.1371/journal.pone.0041361">10.1371/journal.pone.0041361</a>Available: <a href="https://dx.plos.org/10.1371/journal.pone.0041361">https://dx.plos.org/10.1371/journal.pone.0041361</a>.</p>
 </div>
+<div id="ref-Meuleman2019">
+<p>11. Meuleman W: <strong>Epilogos</strong>. 2019, Available: <a href="https://epilogos.altius.org/%20https://github.com/Altius/epilogos">https://epilogos.altius.org/ https://github.com/Altius/epilogos</a>.</p>
+</div>
+</div>
+<p></small></small></p>
+</section><section id="human-trnaome-1" class="slide level2">
+<h2>Human tRNAome</h2>
+<p><img src="graphics/kutteresq_BLcount.png" width="85%" style="display: block; margin: auto;" /></p>
+<p>() = pseudo genes, [] = in blacklisted regions</p>
 </section></section>
     </div>
   </div>
