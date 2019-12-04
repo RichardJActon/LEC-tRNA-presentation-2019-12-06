@@ -36,28 +36,6 @@ suppressPackageStartupMessages({
 })
 ```
 
-
-structure notes
-
-- Why?
-	- Ageing
-	- epigenetics ~ ageing
-	- prior tRNA result ~ artifact?
-	- tRNA biology ~ ageing
-		- tsRNAs
-		- tRNA modifications
-- What - Results
-	- meDip
-		- immunoprecipitation / regional
-	- age related DNA hypermethylation
-	- enrichment, CpG density permutation
-	- array
-		- bisulfite conversion based, highly quantitative
-		- within the tRNA
-	- Targeted
-		- pooling
-		- compare duplicates / isodecoders
-
 # Ageing
 
 ## Burden of disease
@@ -365,7 +343,7 @@ knitr::include_graphics("./graphics/CpGPlotComb.png")
 # Chromatin State
 
 ```{r out.width='65%', fig.show='hold', fig.align = 'center', echo=FALSE}
-knitr::include_graphics("./graphics/CpGPlotComb.png")
+knitr::include_graphics("./graphics/maxScoreBytRNAtRNAge6SplitPlot_BL.png")
 ```
 
 Epilogos [@Meuleman2019] 'Blood & T-cell' 15 State model (tRNA genes +/- 200bp)
@@ -398,3 +376,26 @@ knitr::include_graphics("./graphics/kutteresq_BLcount.png")
 ```
 
 () = pseudo genes, [] = in blacklisted regions
+
+---
+
+structure notes
+
+- Why?
+	- Ageing
+	- epigenetics ~ ageing
+	- prior tRNA result ~ artifact?
+	- tRNA biology ~ ageing
+		- tsRNAs
+		- tRNA modifications
+- What - Results
+	- meDip
+		- immunoprecipitation / regional
+	- age related DNA hypermethylation
+	- enrichment, CpG density permutation
+	- array
+		- bisulfite conversion based, highly quantitative
+		- within the tRNA
+	- Targeted
+		- pooling
+		- compare duplicates / isodecoders
