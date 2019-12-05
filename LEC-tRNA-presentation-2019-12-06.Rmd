@@ -127,9 +127,9 @@ $+$ internal tRNA fragments & piRNAs
 
 ## tRNA expression
 
-- tRNA genes act as insulators [@Raab2011]
-- Clustered with other tRNA genes in 3D [@VanBortle2017]
-- RNA polymerase III [@Schramm2002]
+- tRNA genes act as insulators <small>(Raab et al. 2011 *EMBO* [@Raab2011])</small>
+- Clustered with other tRNA genes in 3D <small>(VanBortle et al. 2017 *Genome Biol* [@VanBortle2017])</small>
+- RNA polymerase III <small>(Schramm & Hernandez 2002 *Genes & Dev* [@Schramm2002])</small>
 - Internal Promoter Structure
 
 ```{r out.width='50%', fig.show='hold', fig.align = 'center', echo=FALSE}
@@ -186,13 +186,14 @@ tRNAs %>%
 
 ## tRNAs in Ageing & Disease
 
-- $\downarrow$ Translation, $\uparrow$ Longevity [@Hansen2007]
-- Ageing ~ TORC1 $\dashv$ Maf1 $\dashv$ polIII $\dashv$ tRNA expression
-- $\downarrow$ polIII, $\uparrow$ Longevity [@Filer2017]
-- Circulating tRNA halves modulated by ageing and calorie restriction [@Dhahbi2013]
-- tsRNAs in stress response & Translational regulation
-
-- Synonymous CFTR mutation to low abundance tRNA causes misfolding [@Kirchner2017]
+- Ageing
+	- $\downarrow$ Translation, $\uparrow$ Longevity <small>(Hansen et al. 2007 *Aging Cell*[@Hansen2007])</small>
+	- Ageing ~ TORC1 $\dashv$ Maf1 $\dashv$ polIII $\dashv$ tRNA expression
+	- $\downarrow$ polIII, $\uparrow$ Longevity <small>(Filer et al. 2017 *Nature* [@Filer2017])</small>
+	- Circulating tRNA halves modulated by ageing and calorie restriction <small>(Dhahbi  et al. 2013 *BMC Genomics*[@Dhahbi2013])</small>
+	- tsRNAs in stress response & Translational regulation
+- Disease
+	- Synonymous CFTR mutation to low abundance tRNA causes misfolding <small>(Kirchner et al. 2017 *PLoS Bio* [@Kirchner2017])</small>
 
 # Results
 
@@ -205,7 +206,7 @@ tRNAs %>%
 	- 50bp reads, 200-500bp fragments
 	- Good Coverage but limited positional resolution
 	
-Bell et al. 2017 *Nat Comm* [@Bell2017a] 
+<small>Bell et al. 2017 *Nat Comm* [@Bell2017a] </small>
 
 ```{r out.width='35%', fig.show='hold', fig.align = 'center', echo=FALSE}
 knitr::include_graphics(
@@ -365,7 +366,7 @@ knitr::include_graphics("./graphics/tRNA-iMet-CAT-1-4_nomSig_CpG.png")
 
 ## tRNA gene methylation by Cell-type 
 
-- Sorted blood cell populations, 450k array [@Reinius2012]
+- Sorted blood cell populations, 450k array <small>Reinius et al. 2012 *PLoS one* [@Reinius2012]</small>
 - 8 study-wide significant tRNAs covered are collectively significantly more methylated in the lymphoid than the myeloid lineage (1.1% difference, Wilcoxon rank sum test p = $1.50\times10^{-6}$)
 - $\therefore$ Age-related $\uparrow$ myeloid cell proportion $\rightarrow$  age-related hypermethylation $\downarrow$
 
@@ -397,7 +398,7 @@ Age hypermethylating tRNAs more Enhancer-like state (Enh, EnhBiv & EnhG)
 knitr::include_graphics("./graphics/maxScoreBytRNAtRNAge6SplitPlot_BL.png")
 ```
 
-Epilogos [@Meuleman2019] 'Blood & T-cell' 15 State model (tRNA genes +/- 200bp)
+[Epilogos](https://epilogos.altius.org/) 'Blood & T-cell' 15 State model (tRNA genes +/- 200bp)
 
 # Expression 
 
@@ -505,7 +506,7 @@ knitr::include_graphics("./graphics/kutteresq_BLcount.png")
 
 - Most heavily modified RNA species
 	- $>$ 100 different modifications
-- 11-13 per tRNA molecule [@Schimmel2017]
+- 11-13 per tRNA molecule <small>(Schimmel 2017 *Nat Rev Mol Cell Biol* [@Schimmel2017])</small>
 
 ```{r, out.width='55%', fig.show='hold', fig.align = 'center', echo=FALSE}
 #@Hopper2013
