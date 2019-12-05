@@ -256,6 +256,10 @@ bb6tRNASummaryTab %>%
 bb6tRNASummaryTabKable
 ```
 
+<section data-notes="
+	- Ill-AAT-4-1 & Ser-AGA-2-6 3' UTR of CTC1 (CST Telomere Replication Complex Component 1)
+"></section>
+
 ## Enrichment for DNA hypermethylation
 
 ```{r out.width='80%', fig.show='hold', fig.align = 'center', echo=FALSE}
