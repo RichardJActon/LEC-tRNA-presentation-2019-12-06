@@ -217,7 +217,7 @@ tRNAs %>%
 
 - tRNA with the same anticodon but different sequence elsewhere
 - Numbers increase with organismal complexity <small>(Goodenbour et al. 2006 *NAR* [@Goodenbour2006])</small>
-- Not equavalent translational efficiency <small>(Geslain et al. 2010 *J Mol Biol* [@Geslain2010])</small>
+- Not equivalent translational efficiency <small>(Geslain et al. 2010 *J Mol Biol* [@Geslain2010])</small>
 
 ```{r out.width='20%', fig.show='hold', fig.align = 'center', echo=FALSE}
 knitr::include_graphics("./graphics/isodecoder.png")
