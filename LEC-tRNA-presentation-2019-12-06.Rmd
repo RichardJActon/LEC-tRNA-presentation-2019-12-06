@@ -152,18 +152,14 @@ $+$ internal tRNA fragments & piRNAs
 knitr::include_graphics("./graphics/tRNA-PollIII_white.png")
 ```
 
-## tRNAs in Ageing & Disease
+## tRNAs in Ageing
 
-- Ageing
-	- $\downarrow$ Translation, $\uparrow$ Longevity <small>(Hansen et al. 2007 *Aging Cell*[@Hansen2007])</small>
-	- Ageing ~ TORC1 $\dashv$ Maf1 $\dashv$ polIII $\dashv$ tRNA expression
-	- $\downarrow$ polIII, $\uparrow$ Longevity <small>(Filer et al. 2017 *Nature* [@Filer2017])</small>
-	- Circulating tRNA halves modulated by ageing and calorie restriction <small>(Dhahbi et al. 2013 *BMC Genomics*[@Dhahbi2013])</small>
-	- tsRNAs in stress response & Translational regulation
-	- __tRNA biology is intimately connected with many systems which modulate ageing__
-- Disease
-	- Synonymous CFTR mutation to low abundance tRNA causes misfolding <small>(Kirchner et al. 2017 *PLoS Bio* [@Kirchner2017])</small>
-	- tRNA fragments implicated in neuro-developmental disorders <small>(Blanco et al. 2014 *EMBO* [@Blanco2014])</small>
+- $\downarrow$ Translation, $\uparrow$ Longevity <small>(Hansen et al. 2007 *Aging Cell*[@Hansen2007])</small>
+- Ageing ~ TORC1 $\dashv$ Maf1 $\dashv$ polIII $\dashv$ tRNA expression
+- $\downarrow$ polIII, $\uparrow$ Longevity <small>(Filer et al. 2017 *Nature* [@Filer2017])</small>
+- Circulating tRNA halves modulated by ageing and calorie restriction <small>(Dhahbi et al. 2013 *BMC Genomics*[@Dhahbi2013])</small>
+- tsRNAs in stress response & Translational regulation
+- __tRNA biology is intimately connected with many systems which modulate ageing__
 
 ## Human tRNAome
 
@@ -230,6 +226,12 @@ knitr::include_graphics("./graphics/kutteresq_BLcount.png")
 ```
 
 () = pseudo genes, [] = in blacklisted regions
+
+## tRNAs & Disease
+
+- Synonymous CFTR mutation to low abundance tRNA causes misfolding <small>(Kirchner et al. 2017 *PLoS Bio* [@Kirchner2017])</small>
+- tRNA fragments implicated in neuro-developmental disorders <small>(Blanco et al. 2014 *EMBO* [@Blanco2014])</small>
+
 
 # Results
 
