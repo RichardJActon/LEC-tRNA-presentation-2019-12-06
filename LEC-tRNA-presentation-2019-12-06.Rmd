@@ -59,6 +59,7 @@ Understanding Ageing
 - $\downarrow$ Age-related Diseases
 
 <section data-notes="
+	- Healthspan - Living longer but chronic conditions
 	- Eliminating any one of these minimal impact on average lifespan
 	- Frailty ~
 "></section>
@@ -83,6 +84,7 @@ Loss of epigenetic information $\rightarrow$ Dysregulation
 
 - 1,000s of Loci Affected
 - Global Hypomethylation
+	- Demethylation of Repetitive elements
 	- Some regions hypermethylating
 - Increased Variability
 - Changes enriched in functional elements
@@ -96,6 +98,8 @@ Epigenetic Changes Capture Biological Ageing
 knitr::include_graphics("./graphics/LBC1921_Horvath1_survival.png")
 ```
 
+Survival is better in those with decelerated DNAm Age
+
 <small>Horvath 2013 *Genome Biol* [@Horvath2013], Marioni et al. 2015 *Genome Biol* [@Marioni2015]</small>
 
 # Why Transfer RNAs (tRNAs)?
@@ -107,6 +111,17 @@ knitr::include_graphics("./graphics/LBC1921_Horvath1_survival.png")
 
 ```{r, out.width='90%', fig.show='hold', fig.align = 'center', echo=FALSE}
 knitr::include_graphics("./graphics/Bell2016_GenBio_FigS1p55_tRNAMet_a-DMR.png")
+```
+
+# Why Transfer RNAs (tRNAs)? {data-transition="none"}
+
+- Bell et al. 2016 *Genome Biol* [@Bell2016]
+- 71 age differentially methylated regions
+	- 39 $\uparrow$, 32 $\downarrow$
+- tRNA-iMet-CAT-1-4 DNAm $\uparrow$ with Age
+
+```{r, out.width='90%', fig.show='hold', fig.align = 'center', echo=FALSE}
+knitr::include_graphics("./graphics/Bell2016_GenBio_FigS1p55_tRNAMet_a-DMR_circle.png")
 ```
 
 ## tRNAs
@@ -131,6 +146,7 @@ $+$ internal tRNA fragments & piRNAs
 - Clustered with other tRNA genes in 3D <small>(VanBortle et al. 2017 *Genome Biol* [@VanBortle2017])</small>
 - RNA polymerase III <small>(Schramm & Hernandez 2002 *Genes & Dev* [@Schramm2002])</small>
 - Internal Promoter Structure
+- Experimentally DNAm $\uparrow\ \rightarrow$ tRNA Expression $\downarrow$ <small>Besser et al. 1990 *FEBS letters* [@Besser1990]</small>
 
 ```{r out.width='50%', fig.show='hold', fig.align = 'center', echo=FALSE}
 knitr::include_graphics("./graphics/tRNA-PollIII_white.png")
@@ -142,17 +158,21 @@ knitr::include_graphics("./graphics/tRNA-PollIII_white.png")
 	- $\downarrow$ Translation, $\uparrow$ Longevity <small>(Hansen et al. 2007 *Aging Cell*[@Hansen2007])</small>
 	- Ageing ~ TORC1 $\dashv$ Maf1 $\dashv$ polIII $\dashv$ tRNA expression
 	- $\downarrow$ polIII, $\uparrow$ Longevity <small>(Filer et al. 2017 *Nature* [@Filer2017])</small>
-	- Circulating tRNA halves modulated by ageing and calorie restriction <small>(Dhahbi  et al. 2013 *BMC Genomics*[@Dhahbi2013])</small>
+	- Circulating tRNA halves modulated by ageing and calorie restriction <small>(Dhahbi et al. 2013 *BMC Genomics*[@Dhahbi2013])</small>
 	- tsRNAs in stress response & Translational regulation
+	- __tRNA biology is intimately connected with many systems which modulate ageing__
 - Disease
 	- Synonymous CFTR mutation to low abundance tRNA causes misfolding <small>(Kirchner et al. 2017 *PLoS Bio* [@Kirchner2017])</small>
+	- tRNA fragments implicated in neuro-developmental disorders <small>(Blanco et al. 2014 *EMBO* [@Blanco2014])</small>
 
 ## Human tRNAome
 
-- Up to 610 tRNA genes
+- Up to 610 tRNA genes <small>Chan 2009 *NAR* [@Chan2009]</small>
 - median length 73bp
 - <46kb, 0.002% of the Genome
 - 2nd most abundant RNA species, ~60 million/cell
+
+<br>
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, out.width='85%', fig.show='hold', fig.align = 'center'}
 tRNAs <- read_tsv(
@@ -185,8 +205,6 @@ tRNAs %>%
 	)
 ```
 
-<small>Chan 2009 *NAR* [@Chan2009]</small>
-
 <section data-notes="
 	- 23 nuclear encoded mitochondrial tRNAs
 	- 116 potential pseudogenes
@@ -194,6 +212,16 @@ tRNAs %>%
 	- 7 of the 61 non-STOP codons are missing - wobble pairing
 		- (*e.g.* GCG Arg, ACC Gly)
 "></section>
+
+## Isodecoders
+
+- tRNA with the same anticodon but different sequence elsewhere
+- Numbers increase with organismal complexity <small>(Goodenbour et al. 2006 *NAR* [@Goodenbour2006])</small>
+- Not equavalent translational efficiency <small>(Geslain et al. 2010 *J Mol Biol* [@Geslain2010])</small>
+
+```{r out.width='20%', fig.show='hold', fig.align = 'center', echo=FALSE}
+knitr::include_graphics("./graphics/isodecoder.png")
+```
 
 # Results
 
@@ -221,15 +249,24 @@ knitr::include_graphics(
 	- Quantile normalised RPM
 "></section>
 
+## Mappability
+
+```{r out.width='65%', fig.show='hold', fig.align = 'center', echo=FALSE}
+knitr::include_graphics("./graphics/mappabilityScoreDensity_tRNAVsFlank500.png")
+```
+
 ## Age-related DNA hypermethyation
 
 - tRNAome-wide significant (p < $8.36\times10^{-5}$)
-	- Batch corrected __44__ $\uparrow$, $\downarrow$ 0
-	- Batch and Blood Cell-type corrected __16__ $\uparrow$, $\downarrow$ 0
+	- Batch corrected 
+		- __44__ $\uparrow$, $\downarrow$ 0
+	- Batch and Blood Cell-type corrected 
+		- __16__ $\uparrow$, $\downarrow$ 0
 - Genome-wide significant (p < $4.34\times10^{-9}$)
 	- 3 Batch and Blood Cell-type corrected
 
- 
+<br>
+
 ```{r, out.width='60%', echo=FALSE,}
 bb6tRNASummaryTab <- read_tsv(
 	"./data/bb3tRNASummaryTab.tsv",
@@ -282,8 +319,6 @@ knitr::include_graphics(
 )
 ```
 
-<small>Combined sampling pool for windows over >18% to avoid replacement</small>
-
 ## MeDIP-seq limitations
 
 - Regional
@@ -292,6 +327,15 @@ knitr::include_graphics(
 
 ```{r out.width='25%', fig.show='hold', fig.align = 'center', echo=FALSE}
 knitr::include_graphics("./graphics/chip-seq.jpeg")
+```
+
+## Neonate & Centenarian
+
+- Whole genome Bisulfite Sequencing (WGBS)
+- tRNA hypermethylation even between single individuals 
+
+```{r out.width='45%', fig.show='hold', fig.align = 'center', echo=FALSE}
+knitr::include_graphics("./graphics/heynViolinBBswsOnlyLabelled_BL.png")
 ```
 
 ## Validation in 450k array
@@ -308,43 +352,47 @@ knitr::include_graphics("./graphics/blood_epitwins450k_Counts_sws_bl.png")
 
 ## Targeted Bisulfite Sequencing (BiS-seq)
 
-Pooled Samples approach
+Pooled Samples approach (N = 190, ~25 per pool)
 
-```{r poolAges, out.width='60%', echo=FALSE,}
-poolColours <-c(
-	"Pool 1"="#ffffcc","Pool 2"="#CCCC56",
-	"Pool 3"="#a1dab4","Pool 4"="#3CA661",
-	
-	"Pool 5"="#41b6c4","Pool 6"="#2899A8",
-	"Pool 7"="#225ea8","Pool 8"="#14488C"#,
-	#"DNAm Age" = "red"
-)
+```{r poolAges, out.width='60%', echo=FALSE,eval=FALSE}
+# poolColours <-c(
+# 	"Pool 1"="#ffffcc","Pool 2"="#CCCC56",
+# 	"Pool 3"="#a1dab4","Pool 4"="#3CA661",
+# 	
+# 	"Pool 5"="#41b6c4","Pool 6"="#2899A8",
+# 	"Pool 7"="#225ea8","Pool 8"="#14488C"#,
+# 	#"DNAm Age" = "red"
+# )
+# 
+# read_tsv("./data/poolSummaries.tsv", col_types = "cdcddd") %>%
+# 	mutate(
+# 		Pool = cell_spec(
+# 			Pool, "html",#"latex",
+# 			# color = "#000000",
+# 			align = "c"#,# angle = 45,
+# 			# background = poolColours[Pool]
+# 		)
+# 	) %>%
+# 	kable(
+# 		digits = 2,
+# 		format = "html",#"latex",
+# 		escape = FALSE,
+# 		booktabs = TRUE,
+# 		#caption = "(ref:poolAgesCap)",
+# 		linesep = ""
+# 	) %>%
+# 	kable_styling(
+# 		bootstrap_options = "striped", full_width = FALSE,
+# 		latex_options = "striped"
+# 	) %>%#, fixed_thead = TRUE
+# 	#row_spec(0, background = "#b8b8b8") %>%
+# 	column_spec(1, bold = TRUE, border_right = TRUE)
+# 
+# #poolSummaryTable
+```
 
-read_tsv("./data/poolSummaries.tsv", col_types = "cdcddd") %>%
-	mutate(
-		Pool = cell_spec(
-			Pool, "html",#"latex",
-			# color = "#000000",
-			align = "c"#,# angle = 45,
-			# background = poolColours[Pool]
-		)
-	) %>%
-	kable(
-		digits = 2,
-		format = "html",#"latex",
-		escape = FALSE,
-		booktabs = TRUE,
-		#caption = "(ref:poolAgesCap)",
-		linesep = ""
-	) %>%
-	kable_styling(
-		bootstrap_options = "striped", full_width = FALSE,
-		latex_options = "striped"
-	) %>%#, fixed_thead = TRUE
-	#row_spec(0, background = "#b8b8b8") %>%
-	column_spec(1, bold = TRUE, border_right = TRUE)
-
-#poolSummaryTable
+```{r out.width='55%', fig.show='hold', fig.align = 'center', echo=FALSE}
+knitr::include_graphics("./graphics/pooling.png")
 ```
 
 ## DNAmAge of Pooled Samples
@@ -375,8 +423,13 @@ knitr::include_graphics("./graphics/tRNA-iMet-CAT-1-4_nomSig_CpG.png")
 ## tRNA gene methylation by Cell-type 
 
 - Sorted blood cell populations, 450k array <small>Reinius et al. 2012 *PLoS one* [@Reinius2012]</small>
-- 8 study-wide significant tRNAs covered are collectively significantly more methylated in the lymphoid than the myeloid lineage (1.1% difference, Wilcoxon rank sum test p = $1.50\times10^{-6}$)
-- $\therefore$ Age-related $\uparrow$ myeloid cell proportion $\rightarrow$  age-related hypermethylation $\downarrow$
+- 8 study-wide significant tRNAs covered
+- Collectively more methylated in lymphoid than myeloid lineage 
+	- (1.1% difference, Wilcoxon rank sum test p = $1.50\times10^{-6}$)
+
+$\therefore$ 
+
+Age-related $\uparrow$ myeloid cell proportion $\rightarrow$ age-related hypermethylation $\downarrow$
 
 ```{r out.width='55%', fig.show='hold', fig.align = 'center', echo=FALSE}
 knitr::include_graphics("./graphics/meanMethbytRNAMatLowBB6_bl.png")
@@ -436,7 +489,7 @@ knitr::include_graphics("./graphics/nonSigIsoMapbbswsPlotsGln-CTG.png")
 
 - Suggests age-related decline in Gln-CTG family tRNA expression
 
-# Conclusions
+# Conclusions & Discussion
 
 - The Human tRNAome is enriched for age related DNA hypermethylation
 	- Some blood cell-type independent
@@ -445,8 +498,10 @@ knitr::include_graphics("./graphics/nonSigIsoMapbbswsPlotsGln-CTG.png")
 - Replicated select tRNAs in Targeted BiS-seq
 - Evidence of tRNA gene hypermethylation in mouse
 - tRNA gene DNAm differences between blood cell-lineages
+- tRNA are in early replicating regions
+	- Possible reason for hypermethylation <small>(Muller & Nieduszynski 2017 *J Cell Biol*, [@Muller2017], Du et at. 2019 *Nat Comms* [@Du1029])</small>
 
-# Future Work - Alu Clock
+# Current Work - Alu Clock
 
 - Constructing a DNAm clock using Alu elements
 - GWAS for Alu Age acceleration
@@ -462,12 +517,13 @@ dir("graphics", pattern = "_logo.png", full.names = TRUE) %>%
 knitr::include_graphics()
 ```
 
-- Supervisors: Christopher G. Bell, Karen Lillicrop, Cyrus Cooper
-- MRC LEU: Elaine Dennison (Hertfordshire), Cyrus Cooper (MAVIDOS), Nikki Graham
-- Barts and the London: Charles Mein, Emma Bourne, Eva Wozniak
-- TwinsUK: Tim Spector, Pirro Hysi
+- __Supervisors:__ Christopher G. Bell, Karen Lillicrop, Cyrus Cooper
+- __MRC LEU:__ Elaine Dennison (Hertfordshire), Cyrus Cooper, Nicholas Harvey (MAVIDOS), Nikki Graham
+- __Barts and the London:__ Charles Mein, Emma Bourne, Eva Wozniak
+- __TwinsUK / KCL:__ Tim Spector, Pirro Hysi, Jordana Bell, Wei Yuan
+- __BGI shenzen:__ Fei Gao, Yudong Xia, Jun Wang
 - IRIDIS High-Performance Computing Facility
-- Funding: Medical Research Council
+- __Funding:__ Medical Research Council
 
 ## Slides
 
