@@ -504,6 +504,8 @@ knitr::include_graphics("./graphics/nonSigIsoMapbbswsPlotsGln-CTG.png")
 # Current Work - Alu Clock
 
 - Constructing a DNAm clock using Alu elements
+- MeDIP-seq data coverage of regions not on the array
+- Compare to other clocks
 - GWAS for Alu Age acceleration
 
 ```{r, out.width='85%', fig.show='hold', fig.align = 'center', echo=FALSE}
