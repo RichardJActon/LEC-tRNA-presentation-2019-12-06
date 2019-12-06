@@ -568,8 +568,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li>&lt;46kb, 0.002% of the Genome</li>
 <li>2nd most abundant RNA species, ~60 million/cell</li>
 </ul>
-<div id="htmlwidget-1d5af30712c930c60e95" style="width:800px;height:400px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1d5af30712c930c60e95">{"x":{"visdat":{"20196017f248":["function () ","plotlyVisDat"]},"cur_data":"20196017f248","attrs":{"20196017f248":{"labels":{},"values":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"pie","hole":0.6,"inherit":true}},"layout":{"width":800,"height":400,"margin":{"b":40,"l":60,"t":50,"r":10},"title":"Proportion of tRNAs By Chromosome","showlegend":true,"xaxis":{"showgrid":false,"zeroline":false,"showticklabels":false},"yaxis":{"showgrid":false,"zeroline":false,"showticklabels":false},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"labels":["chr1","chr1_gl000192_random","chr10","chr11","chr12","chr13","chr14","chr15","chr16","chr17","chr18","chr19","chr2","chr20","chr21","chr22","chr3","chr4","chr5","chr6","chr7","chr8","chr9","chrX"],"values":[127,2,7,21,15,5,24,12,32,42,1,14,26,1,2,1,9,5,25,176,32,11,10,10],"type":"pie","hole":0.6,"marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(255,255,255,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-edeaa4e4e704a86831df" style="width:800px;height:400px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-edeaa4e4e704a86831df">{"x":{"visdat":{"257071f43380":["function () ","plotlyVisDat"]},"cur_data":"257071f43380","attrs":{"257071f43380":{"labels":{},"values":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"pie","hole":0.6,"inherit":true}},"layout":{"width":800,"height":400,"margin":{"b":40,"l":60,"t":50,"r":10},"title":"Proportion of tRNAs By Chromosome","showlegend":true,"xaxis":{"showgrid":false,"zeroline":false,"showticklabels":false},"yaxis":{"showgrid":false,"zeroline":false,"showticklabels":false},"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"labels":["chr1","chr1_gl000192_random","chr10","chr11","chr12","chr13","chr14","chr15","chr16","chr17","chr18","chr19","chr2","chr20","chr21","chr22","chr3","chr4","chr5","chr6","chr7","chr8","chr9","chrX"],"values":[127,2,7,21,15,5,24,12,32,42,1,14,26,1,2,1,9,5,25,176,32,11,10,10],"type":"pie","hole":0.6,"marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(255,255,255,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 <p><small>Chan 2009 <em>NAR</em> <span class="citation" data-cites="Chan2009">[<a href="#/ref-Chan2009" role="doc-biblioref">12</a>]</span></small></p>
 <section data-notes="
     - 23 nuclear encoded mitochondrial tRNAs
@@ -594,6 +594,10 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </ul>
 <p><small>Bell et al. 2017 <em>Nat Comm</em> <span class="citation" data-cites="Bell2017a">[<a href="#/ref-Bell2017a" role="doc-biblioref">13</a>]</span> </small></p>
 <p><img src="graphics/chip-seq.jpeg" width="35%" style="display: block; margin: auto;" /><img src="graphics/500bpwindowsing_bg.png" width="35%" style="display: block; margin: auto;" /></p>
+<section data-notes="
+    - Quantile normalised RPM
+">
+</section>
 </section><section id="age-related-dna-hypermethyation" class="slide level2">
 <h2>Age-related DNA hypermethyation</h2>
 <ul>
@@ -690,7 +694,7 @@ chr17
 <li>5 of these show an increase (<span class="math inline">\(4.39\times10^{-4}\)</span>, N = 587)</li>
 <li>Cell-type corrected</li>
 </ul>
-<p><img src="graphics/blood_epitwins450k_Counts_sws_bl.png" width="55%" style="display: block; margin: auto;" /></p>
+<p><img src="graphics/blood_epitwins450k_Counts_sws_bl.png" width="50%" style="display: block; margin: auto;" /></p>
 </section><section id="targeted-bisulfite-sequencing-bis-seq" class="slide level2">
 <h2>Targeted Bisulfite Sequencing (BiS-seq)</h2>
 <p>Pooled Samples approach</p>
@@ -914,11 +918,14 @@ Female
 <p><img src="graphics/CpGPlotComb.png" width="60%" style="display: block; margin: auto;" /></p>
 <p><small>Petkovich et al. 2017 <em>Cell Met</em> <span class="citation" data-cites="Petkovich2017">[<a href="#/ref-Petkovich2017" role="doc-biblioref">15</a>]</span></small></p>
 </section></section>
-<section id="functional-consequences" class="title-slide slide level1"><h1>Functional Consequences</h1></section>
-<section id="chromatin-state" class="title-slide slide level1"><h1>Chromatin State</h1><p>Age hypermethylating tRNAs more Enhancer-like state (Enh, EnhBiv &amp; EnhG) - (Fisher’s Exact test p = 0.01)</p>
+<section><section id="functional-consequences" class="title-slide slide level1"><h1>Functional Consequences</h1></section><section id="chromatin-state" class="slide level2">
+<h2>Chromatin State</h2>
+<p>Age hypermethylating tRNAs more Enhancer-like state (Enh, EnhBiv &amp; EnhG) - (Fisher’s Exact test p = 0.01)</p>
 <p><img src="graphics/maxScoreBytRNAtRNAge6SplitPlot_BL.png" width="65%" style="display: block; margin: auto;" /></p>
-<p><a href="https://epilogos.altius.org/">Epilogos</a> ‘Blood &amp; T-cell’ 15 State model (tRNA genes +/- 200bp)</p></section>
-<section><section id="expression" class="title-slide slide level1"><h1>Expression</h1></section><section id="mintmap" class="slide level2">
+<p><a href="https://epilogos.altius.org/">Epilogos</a> ‘Blood &amp; T-cell’ 15 State model (tRNA genes +/- 200bp)</p>
+</section><section id="expression" class="slide level2">
+<h2>Expression</h2>
+</section><section id="mintmap" class="slide level2">
 <h2>MINTmap</h2>
 <ul>
 <li>Exhaustive exact search of tRNA sequence space</li>

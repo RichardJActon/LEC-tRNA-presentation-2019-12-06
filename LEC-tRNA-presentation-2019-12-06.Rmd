@@ -217,6 +217,10 @@ knitr::include_graphics(
 )
 ```
 
+<section data-notes="
+	- Quantile normalised RPM
+"></section>
+
 ## Age-related DNA hypermethyation
 
 - tRNAome-wide significant (p < $8.36\times10^{-5}$)
@@ -298,7 +302,7 @@ knitr::include_graphics("./graphics/chip-seq.jpeg")
 - 5 of these show an increase ($4.39\times10^{-4}$, N = 587)
 - Cell-type corrected
 
-```{r out.width='55%', fig.show='hold', fig.align = 'center', echo=FALSE}
+```{r out.width='50%', fig.show='hold', fig.align = 'center', echo=FALSE}
 knitr::include_graphics("./graphics/blood_epitwins450k_Counts_sws_bl.png")
 ```
 
@@ -393,7 +397,7 @@ knitr::include_graphics("./graphics/CpGPlotComb.png")
 
 # Functional Consequences
 
-# Chromatin State
+## Chromatin State
 
 Age hypermethylating tRNAs more Enhancer-like state (Enh, EnhBiv & EnhG) 
 	- (Fisher's Exact test p = 0.01)
@@ -404,7 +408,7 @@ knitr::include_graphics("./graphics/maxScoreBytRNAtRNAge6SplitPlot_BL.png")
 
 [Epilogos](https://epilogos.altius.org/) 'Blood & T-cell' 15 State model (tRNA genes +/- 200bp)
 
-# Expression 
+## Expression 
 
 ## MINTmap
 
