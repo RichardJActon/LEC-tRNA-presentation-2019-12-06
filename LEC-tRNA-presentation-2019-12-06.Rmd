@@ -136,6 +136,17 @@ $+$ internal tRNA fragments & piRNAs
 knitr::include_graphics("./graphics/tRNA-PollIII_white.png")
 ```
 
+## tRNAs in Ageing & Disease
+
+- Ageing
+	- $\downarrow$ Translation, $\uparrow$ Longevity <small>(Hansen et al. 2007 *Aging Cell*[@Hansen2007])</small>
+	- Ageing ~ TORC1 $\dashv$ Maf1 $\dashv$ polIII $\dashv$ tRNA expression
+	- $\downarrow$ polIII, $\uparrow$ Longevity <small>(Filer et al. 2017 *Nature* [@Filer2017])</small>
+	- Circulating tRNA halves modulated by ageing and calorie restriction <small>(Dhahbi  et al. 2013 *BMC Genomics*[@Dhahbi2013])</small>
+	- tsRNAs in stress response & Translational regulation
+- Disease
+	- Synonymous CFTR mutation to low abundance tRNA causes misfolding <small>(Kirchner et al. 2017 *PLoS Bio* [@Kirchner2017])</small>
+
 ## Human tRNAome
 
 - Up to 610 tRNA genes
@@ -183,17 +194,6 @@ tRNAs %>%
 	- 7 of the 61 non-STOP codons are missing - wobble pairing
 		- (*e.g.* GCG Arg, ACC Gly)
 "></section>
-
-## tRNAs in Ageing & Disease
-
-- Ageing
-	- $\downarrow$ Translation, $\uparrow$ Longevity <small>(Hansen et al. 2007 *Aging Cell*[@Hansen2007])</small>
-	- Ageing ~ TORC1 $\dashv$ Maf1 $\dashv$ polIII $\dashv$ tRNA expression
-	- $\downarrow$ polIII, $\uparrow$ Longevity <small>(Filer et al. 2017 *Nature* [@Filer2017])</small>
-	- Circulating tRNA halves modulated by ageing and calorie restriction <small>(Dhahbi  et al. 2013 *BMC Genomics*[@Dhahbi2013])</small>
-	- tsRNAs in stress response & Translational regulation
-- Disease
-	- Synonymous CFTR mutation to low abundance tRNA causes misfolding <small>(Kirchner et al. 2017 *PLoS Bio* [@Kirchner2017])</small>
 
 # Results
 
